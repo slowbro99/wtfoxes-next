@@ -1,0 +1,6 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "default-src 'self'; frame-src 'self'; script-src 'self' 'unsafe-inline' indentity.netlify.com; connect-src 'self' fonts.googleapis.com; img-src 'self' data:; style-src 'self' 'unsafe-inline' fonts.googleapis.com ;base-uri 'self';form-action 'self'; font-src 'self' fonts.gstatic.com; prefetch-src 'self' 'unsafe-inline'; manifest-src 'self'"
