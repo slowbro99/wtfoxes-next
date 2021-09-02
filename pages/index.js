@@ -18,10 +18,11 @@ const useMint = () => {
 
   const sendWithGas = async (amount) => {
     const ethTotal = PRICE_PER_MINT.mul(amount);
-
+    console.log(amount);
     let gas;
     try {
       gas = await contract.estimateGas.mintWTFoxes(amount);
+      console.log(gas);
     } catch (e) {
       console.error(e);
     }
