@@ -30,9 +30,9 @@ const useMint = () => {
     // add extra gas if estimate is ok and have more than 1 item
     send(
       amount,
-      amount > 1 && gas
+      amount > 0 && gas
         ? {
-            gasLimit: gas.mul(120).div(100),  // add 15% gas to mints to account for out of gas errors
+            gasLimit: gas.mul(115).div(100),  // add 15% gas to mints to account for out of gas errors
             value: ethTotal
           }
         : null
