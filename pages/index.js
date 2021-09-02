@@ -21,7 +21,7 @@ const useMint = () => {
     console.log(amount);
     let gas;
     try {
-      gas = await contract.estimateGas.mintWTFoxes(amount);
+      gas = await contract.estimateGas.mintWTFoxes(amount, {value: ethTotal});
       console.log(gas);
     } catch (e) {
       console.error(e);
